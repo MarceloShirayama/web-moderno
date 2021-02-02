@@ -1,5 +1,5 @@
 // var pode ser  reatribuído o valor e pode ser redeclarada a variável
-var a = 3;
+let a = 3;
 // let  pode ser  reatribuído o valor e não pode ser redeclarada a variável
 let b = 4;
 // const  não pode ser  reatribuído o valor e não pode ser redeclarada a variável
@@ -7,7 +7,7 @@ const c = 5;
 
 a = 30;
 
-var a = 300;
+// let a = 300;
 
 b = 40;
 

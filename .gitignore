@@ -1,3 +1,6 @@
 node_modules
 .DS_Store
 exercicios-web-cod3r/
+package-lock.json
+package.json
+.eslintrc.json

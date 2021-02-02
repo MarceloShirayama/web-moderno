@@ -1,6 +1,6 @@
 const raio = 5.6;
 
-const area = Math.PI * Math.pow(raio, 2);
+const area = Math.PI * raio * 2;
 
 console.log(`raio: ${raio} - área: ${area.toFixed(2)}`);
 
