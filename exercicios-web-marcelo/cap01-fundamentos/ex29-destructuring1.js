@@ -15,13 +15,13 @@ console.log(`nome: ${nome}, idade: ${idade}`);
 const { nome: n, idade: i } = pessoa;
 console.log(n, i);
 
-// const { nome } = pessoa; => SyntaxError: Identifier 'nome' has already been 
+// const { nome } = pessoa; => SyntaxError: Identifier 'nome' has already been
 // console.log(nome);
 
 const { endereco } = pessoa;
 console.log(endereco);
 
-const { endereco: { logradouro, numero }} = pessoa;
+const { endereco: { logradouro, numero } } = pessoa;
 console.log(logradouro, numero);
 
 const { sobrenome } = pessoa;

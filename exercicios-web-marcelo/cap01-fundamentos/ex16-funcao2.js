@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable arrow-parens */
 // Armazenado uma função em uma variável
 const imprimirSoma = function (a, b) {
   console.log(a + b);

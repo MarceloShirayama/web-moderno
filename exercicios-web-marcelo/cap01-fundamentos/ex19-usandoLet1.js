@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+/* eslint-disable prefer-const */
 let numero = 1;
 {
   let numero = 2;// let tem escopo de bloco

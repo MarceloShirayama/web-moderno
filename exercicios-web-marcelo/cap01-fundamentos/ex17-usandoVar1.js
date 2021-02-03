@@ -1,8 +1,12 @@
+/* eslint-disable no-lone-blocks */
+/* eslint-disable vars-on-top */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-var */
 {
   {
     {
       {
-        var sera = 'Será???'// visível fora do bloco
+        var sera = 'Será???'; // visível fora do bloco
       }
     }
   }
@@ -10,7 +14,7 @@
 console.log(sera);
 
 function teste() {
-  var local = 123// visível só dentro da função
+  var local = 123;// visível só dentro da função
 }
 // console.log(local); => ReferenceError: local is not defined
 
