@@ -5,7 +5,6 @@ Number.prototype.entre = function (inicio, fim) {
 };
 
 const imprimirResultado = (nota) => {
-  console.log('Inicio');
   if (nota.entre(9, 10)) {
     console.log('Quadro de Honra!!!');
   } else if (nota.entre(7, 8.99)) {
@@ -17,29 +16,11 @@ const imprimirResultado = (nota) => {
   } else {
     console.log('Nota Invalida');
   }
-  console.log('Fim');
 };
 
-console.log(imprimirResultado(10));
-console.log(imprimirResultado(8));
-console.log(imprimirResultado(4));
-console.log(imprimirResultado(2));
-console.log(imprimirResultado(-1));
-console.log(imprimirResultado(11));
-// FIXME: Tratar undefined
-/*
-Resultado:
-Quadro de Honra!!!
-Fim
-undefined
-Aprovado
-Fim
-undefined
-Recuperação
-Fim
-undefined
-Reprovado
-Fim
-undefined
-PORQUE UNDEFINED
-*/
+imprimirResultado(10);
+imprimirResultado(8);
+imprimirResultado(4);
+imprimirResultado(2);
+imprimirResultado(-1);
+imprimirResultado(11);
