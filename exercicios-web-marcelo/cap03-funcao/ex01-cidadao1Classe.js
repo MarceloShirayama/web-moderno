@@ -7,7 +7,7 @@
 function fn1(a, b) { return a - b; }
 
 // criar função em uma variável
-const fn2 = function () {};
+const fn2 = function () { };
 
 // armazenar função em um array
 const array = [function (a, b) { return a + b; }, fn1, fn2];
@@ -26,7 +26,7 @@ function chamaFuncao(fn) {
 }
 // eslint-disable-next-line prefer-arrow-callback
 chamaFuncao(function () { console.log('Executando...'); });
-function executando() { console.log('Executando outra vez') }
+function executando() { console.log('Executando outra vez'); }
 chamaFuncao(executando);
 
 // função pode retornar/conter outra função
