@@ -1,10 +1,15 @@
+/* eslint-disable no-lonely-if */
 function Carro(velocidadeMaxima = 200, delta = 5) {
   let velocidadeAtual = 0; // atributo privado
   this.acelerar = () => { // método público
     if (velocidadeAtual + delta <= velocidadeMaxima) {
       velocidadeAtual += delta;
     } else {
-      velocidadeAtual = velocidadeMaxima;
+      if (velocidadeMaxima < 150) {
+        velocidadeAtual = `${velocidadeMaxima}... merreca!!!`;
+      } else {
+        velocidadeAtual = `${velocidadeMaxima}... tá no talo!!!`;
+      }
     }
   };
   this.getVelocidadeAtual = () => velocidadeAtual; // método público
@@ -37,8 +42,6 @@ console.log(ferrari.getVelocidadeAtual());
 
 console.log('Fuscão ACELERANDO!!!');
 const fusca = new Carro(60);
-fusca.acelerar();
-console.log(fusca.getVelocidadeAtual());
 fusca.acelerar();
 console.log(fusca.getVelocidadeAtual());
 fusca.acelerar();
