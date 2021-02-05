@@ -7,9 +7,9 @@ function criarPessoa(nome, sobrenome = 'nao informado') {
   };
 }
 
-const pessoa1 = criarPessoa('Marcelo', 'Shirayama');
-const pessoa2 = criarPessoa('Julia', 'Shirayama');
-const pessoa3 = criarPessoa('Bruna', 'Madeiri');
+const pessoa1 = criarPessoa('João', 'Ninguém');
+const pessoa2 = criarPessoa('Maria', 'da Silva');
+const pessoa3 = criarPessoa('José', 'Pedregulho');
 const pessoa4 = criarPessoa('Nina');
 
 console.log(pessoa1);
