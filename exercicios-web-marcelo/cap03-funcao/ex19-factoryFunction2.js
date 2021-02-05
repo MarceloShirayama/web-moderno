@@ -4,8 +4,8 @@
 function criarProduto(nome, preco) {
   return {
     nome,
-    preco,
-    descontoMaximo: 0.1 * preco,
+    preco: preco.toFixed(2),
+    descontoMaximo: (0.1 * preco).toFixed(2),
   };
 }
 
