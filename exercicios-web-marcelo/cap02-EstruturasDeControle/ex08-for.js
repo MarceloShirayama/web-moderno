@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 let contador = 1;
 
 console.log('Contador com while:');

@@ -11,6 +11,7 @@
     }
   }
 }
+// eslint-disable-next-line block-scoped-var
 console.log(sera);
 
 function teste() {

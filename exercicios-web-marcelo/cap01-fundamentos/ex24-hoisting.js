@@ -1,3 +1,6 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
 console.log('a = ', a);
 
 var a = 2;

@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable no-new-object */
 console.log(`typeof Object: ${typeof Object}`);
 console.log(`typeof new Object(): ${typeof new Object()}`);
 

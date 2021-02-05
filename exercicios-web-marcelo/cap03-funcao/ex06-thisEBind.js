@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable new-parens */
 /* eslint-disable no-new */
 /* eslint-disable func-names */

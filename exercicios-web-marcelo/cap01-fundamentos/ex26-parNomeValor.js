@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 const saudacao = 'Opa'; // contexto lexico 1
 
 function exec() {
