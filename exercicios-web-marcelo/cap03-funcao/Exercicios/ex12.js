@@ -16,7 +16,9 @@ console.log(calculoFatorial(10));
 
 console.log('===================');
 // resoluçãocoe3r
-// ISSUE: não entendi como o if está fazendo o loop e a função está sendo chamada dentro dela mesmo.
+// *ISSUE: não entendi como o if está fazendo o loop e a função está sendo chamada dentro
+// dela mesmo.
+// DONE: Recursive funtion - eloquente javascript 03-funcoes.md linha 311.
 console.log('código cod3r');
 function fatorial2(numero) {
   if (numero === 0) {
