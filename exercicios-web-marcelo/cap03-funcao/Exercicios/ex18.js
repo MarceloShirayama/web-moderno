@@ -1,43 +1,58 @@
 /*
-19) O cardápio de uma lanchonete é o seguinte:
-
-Código        Descrição do Produto        Preço
-100           Cachorro Quente             R$ 3,00
-200           Hambúrguer Simples          R$ 4,00
-300           Cheeseburguer               R$ 5,50
-400           Bauru                       R$ 7,50
-500           Refrigerante                R$ 3,50
-600           Suco                        R$ 2,80
-
-Implemente uma função que receba como parâmetros o código do item pedido, a quantidade e
-calcule o valor a ser pago por aquele lanche. Considere que a cada execução somente será
-calculado um item. Use o comando switch. Crie um caso default para produto não existente.
+18) Faça um programa que leia um número entre 0 e 10, e escreva este número por extenso.
+Use o comando switch. Crie um case default que escreva ‘Número fora do intervalo.’
 */
 
-// eslint-disable-next-line func-names
-const totalAPagar = function (codigo, qtde) {
-  switch (codigo) {
-    case 100:
-      return `Total a pagar: R$ ${(qtde * 3).toFixed(2).toString().replace('.', ',')}`;
-    case 200:
-      return `Total a pagar: R$ ${(qtde * 4).toFixed(2).toString().replace('.', ',')}`;
-    case 300:
-      return `Total a pagar: R$ ${(qtde * 5.5).toFixed(2).toString().replace('.', ',')}`;
-    case 400:
-      return `Total a pagar: R$ ${(qtde * 7.5).toFixed(2).toString().replace('.', ',')}`;
-    case 500:
-      return `Total a pagar: R$ ${(qtde * 3.5).toFixed(2).toString().replace('.', ',')}`;
-    case 600:
-      return `Total a pagar: R$ ${(qtde * 2.8).toFixed(2).toString().replace('.', ',')}`;
+function numeroPorExtenso(numero) {
+  switch (numero) {
+    case 0:
+      console.log(`${numero} por extenso: zero`);
+      break;
+    case 1:
+      console.log(`${numero} por extenso: um`);
+      break;
+    case 2:
+      console.log(`${numero} por extenso: dois`);
+      break;
+    case 3:
+      console.log(`${numero} por extenso: três`);
+      break;
+    case 4:
+      console.log(`${numero} por extenso: quatro`);
+      break;
+    case 5:
+      console.log(`${numero} por extenso: cinco`);
+      break;
+    case 6:
+      console.log(`${numero} por extenso: seis`);
+      break;
+    case 7:
+      console.log(`${numero} por extenso: sete`);
+      break;
+    case 8:
+      console.log(`${numero} por extenso: oito`);
+      break;
+    case 9:
+      console.log(`${numero} por extenso: nove`);
+      break;
+    case 10:
+      console.log(`${numero} por extenso: dez`);
+      break;
     default:
-      return `Produto código ${codigo} não cadastrado.`;
+      console.log(`${numero} fora do intervalo`);
+      break;
   }
-};
+}
 
-console.log(totalAPagar(100, 2));
-console.log(totalAPagar(200, 2));
-console.log(totalAPagar(300, 2));
-console.log(totalAPagar(400, 2));
-console.log(totalAPagar(500, 2));
-console.log(totalAPagar(600, 2));
-console.log(totalAPagar(700, 2));
+numeroPorExtenso(0);
+numeroPorExtenso(1);
+numeroPorExtenso(2);
+numeroPorExtenso(3);
+numeroPorExtenso(4);
+numeroPorExtenso(5);
+numeroPorExtenso(6);
+numeroPorExtenso(7);
+numeroPorExtenso(8);
+numeroPorExtenso(9);
+numeroPorExtenso(10);
+numeroPorExtenso(11);
