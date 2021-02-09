@@ -7,8 +7,11 @@ O retorno deve ser o valor a ser pago para o respectivo mês escolhido.
 */
 
 function calculoVencimento(capital, tempo) {
-  const montante = capital * (1 + 0.05) ** (tempo - 1);
-  return `Mês ${tempo} valor: R$ ${montante.toFixed(2).toString().replace('.', ',')}`;
+  if (tempo > 0 && tempo < 13) {
+    const montante = capital * (1 + 0.05) ** (tempo - 1);
+    return `Mês ${tempo} valor: R$ ${montante.toFixed(2).toString().replace('.', ',')}`;
+  }
+  return `Mês ${tempo} é inválido!`;
 }
 
 console.log(calculoVencimento(100, 1));
@@ -23,3 +26,4 @@ console.log(calculoVencimento(100, 9));
 console.log(calculoVencimento(100, 10));
 console.log(calculoVencimento(100, 11));
 console.log(calculoVencimento(100, 12));
+console.log(calculoVencimento(100, 13));
