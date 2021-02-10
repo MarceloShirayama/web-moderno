@@ -12,6 +12,7 @@ function calcCresc(alturaCriancaMenor, taxaCriancaMenor, alturaCriancaMaior, tax
   while (alturaMenor < alturaMaior) {
     alturaMenor += taxaCriancaMenor;
     alturaMaior += taxaCriancaMaior;
+    // eslint-disable-next-line no-plusplus
     anos++;
   } return anos;
 }
