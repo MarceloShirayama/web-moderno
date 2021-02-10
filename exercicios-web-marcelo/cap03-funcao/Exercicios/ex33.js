@@ -6,12 +6,29 @@ de união concat() de duas maneiras diferentes para unir os vetores, e mostre o 
 no console. Todos os elementos do vetor resultado deverão aparecer no console.
 */
 
-let vetorInteiro = [1, 2, 3, 4];
-let vetorString = ['Arthur', 'Christian', 'Yuri', 'Galdino'];
-let vetorDouble = [1.1, 2.2, 3.3, 4.4];
+const vetorInteiro = [1, 2, 3, 4];
+const vetorString = ['Arthur', 'Christian', 'Yuri', 'Galdino'];
+const vetorDouble = [1.1, 2.2, 3.3, 4.4];
+
+console.log('ex 1:');
 
 const alphaNumerico = vetorInteiro.concat(vetorString);
 const tresVetores = vetorInteiro.concat(vetorString, vetorDouble);
 
 console.log(alphaNumerico);
 console.log(tresVetores);
+
+console.log('====================================');
+
+console.log('ex 2:');
+
+function concatenar(...args) {
+  let resultado = [];
+  for (let i = 0; i < args.length; i++) {
+    resultado = resultado.concat(args[i]);
+  }
+  return resultado;
+}
+
+console.log(concatenar(vetorInteiro, vetorDouble));
+console.log(concatenar(vetorDouble, vetorString));
