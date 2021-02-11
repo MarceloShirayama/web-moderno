@@ -19,10 +19,12 @@ const verificaAnoBissexto = (ano) => {
 
 const listaDeAnos = [];
 
+// eslint-disable-next-line no-plusplus
 for (let i = 1900; i <= 2100; i++) {
   listaDeAnos.push(i);
 }
 
+// eslint-disable-next-line no-plusplus
 for (let i = 0; i < listaDeAnos.length; i++) {
   console.log(verificaAnoBissexto(listaDeAnos[i]));
 }

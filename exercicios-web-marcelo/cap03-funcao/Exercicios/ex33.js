@@ -24,6 +24,7 @@ console.log('ex 2:');
 
 function concatenar(...args) {
   let resultado = [];
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < args.length; i++) {
     resultado = resultado.concat(args[i]);
   }

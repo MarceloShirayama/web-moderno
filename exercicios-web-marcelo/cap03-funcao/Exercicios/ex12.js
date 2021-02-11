@@ -6,6 +6,7 @@
 console.log('Meu código');
 let fatorial = 1;
 const calculoFatorial = (num) => {
+  // eslint-disable-next-line no-plusplus
   for (let i = 1; i <= num; i++) {
     fatorial *= i;
   }

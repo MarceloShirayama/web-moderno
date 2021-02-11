@@ -17,6 +17,7 @@ que recebam como parâmetros um número n (número de termo), a1 (o primeiro ter
 //    r = razão
 
 function progressaoAritmetica(n, a1, r) {
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < n; i++) {
     console.log(a1 + r * i);
   }
@@ -26,6 +27,7 @@ function progressaoAritmetica(n, a1, r) {
 console.log(progressaoAritmetica(10, 10, 15));
 
 function progressaoGeometrica(n, a1, r) {
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < n; i++) {
     console.log(a1 * (r ** i));
   }

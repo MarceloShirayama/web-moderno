@@ -12,6 +12,7 @@ while (i <= 50) {
 console.log('===================');
 console.log('ou');
 
+// eslint-disable-next-line no-plusplus
 for (let index = 1; index <= 50; index++) {
   console.log(index);
 }

@@ -5,13 +5,14 @@ para início e 100 para fim. Atente para corrigir a ordem dos parâmetros caso a
 receba o valor maior antes do menor.
 */
 
-function imprimirImpares(inicio =0, fim = 100) {
+function imprimirImpares(inicio = 0, fim = 100) {
   let valorInicial = inicio;
   let valorFinal = fim;
   if (inicio > fim) {
     valorInicial = fim;
     valorFinal = inicio;
   }
+  // eslint-disable-next-line no-plusplus
   for (let i = valorInicial; i <= valorFinal; i++) {
     if (i % 2 !== 0) {
       console.log(i);

@@ -11,6 +11,7 @@ const numero = 2;
 
 function multVetorPorNumero(array, multiplicador) {
   const vetorResultado = [];
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < array.length; i++) {
     vetorResultado.push(array[i] * multiplicador);
   }
@@ -21,6 +22,7 @@ console.log(multVetorPorNumero(vetor, numero));
 
 function multVetorSeMaior5(array, multiplicador) {
   const vetorResultado = [];
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < array.length; i++) {
     if (array[i] > 5) {
       vetorResultado.push(array[i] * multiplicador);
