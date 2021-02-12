@@ -3,7 +3,7 @@ const b = 2;
 const c = 3;
 
 // eslint-disable-next-line object-shorthand
-const obj1 = { a: a, b: b, c: c }; 
+const obj1 = { a: a, b: b, c: c };
 // => como o atributo e o valor são iguais, não é mais necessário.
 // nova notação, pode ser escrito:
 const obj2 = { a, b, c };
