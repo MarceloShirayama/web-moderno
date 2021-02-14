@@ -40,7 +40,7 @@ console.log('-----------------------------------');
 p1.preco = 1.99;
 p1.desc = 0.05;
 console.log(p1);
-console.log(p1.getPrecoDesconto()); // desconto não altera
+console.log(p1.getPrecoDesconto()); // FIXME: desconto não altera
 
 console.log('=====================================');
 
