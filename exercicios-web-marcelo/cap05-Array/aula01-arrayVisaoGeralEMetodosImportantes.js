@@ -90,3 +90,62 @@ aprovados.splice(1, 1);
 console.log(aprovados);
 aprovados.splice(-1, 1);
 console.log(aprovados);
+
+console.log();
+console.log('Com pop (exclui último elemento do Arary):');
+aprovados.pop();
+console.log(aprovados);
+
+console.log();
+console.log('Com shift (exclui primeiro elemento do Arary):');
+aprovados.shift();
+console.log(aprovados);
+
+console.log('--------------------------------------');
+
+console.log('Adicionado e removendo elementos:');
+
+console.log();
+console.log(aprovados);
+
+console.log();
+console.log('Método splice (muito versátil):');
+
+console.log();
+console.log('Removendo índice 1 e adicionado a partir da poisção 1, 2 elementos;');
+aprovados.splice(1, 1, 'Pedro', 'Mariana');
+console.log(aprovados);
+
+console.log();
+console.log('Adicionado a partir da posição 2, 1 elemento:');
+aprovados.splice(2, 0, 'Carlos');
+console.log(aprovados);
+
+console.log('============================================');
+
+console.log('Copiar parte de um Array:');
+
+console.log();
+console.log('Método slice:');
+/*
+O método slice() retorna uma cópia superficial de uma parte de uma matriz em um novo objeto
+de matriz selecionado de start a end ( end não incluído) onde start e end representa o índice
+de itens nessa matriz. A matriz original não será modificada.
+*/
+
+const pilotos = ['Vettel', 'Alonso', 'Raikkonen', 'Massa'];
+console.log(pilotos);
+
+console.log();
+console.log('Copiando da posição 2 até o final do Array:');
+const ultimosPilotos = pilotos.slice(2);
+console.log(ultimosPilotos);
+
+console.log();
+console.log('Copiando da posição 0 até a posição 2, excluindo a posição 2, do Array:');
+const primeirosPilotos = pilotos.slice(0, 2);
+console.log(primeirosPilotos);
+
+console.log();
+console.log('Array original continua o mesmo:');
+console.log(pilotos);
