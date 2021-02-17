@@ -1,0 +1,29 @@
+{
+  "name": "web-moderno",
+  "version": "1.0.0",
+  "description": "Para mais informações acessar https://www.cod3r.com.br/courses/web-moderno",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./exercicios-web-marcelo/*/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarceloShirayama/web-moderno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarceloShirayama/web-moderno/issues"
+  },
+  "homepage": "https://github.com/MarceloShirayama/web-moderno#readme",
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}

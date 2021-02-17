@@ -1,0 +1,17 @@
+{
+  "name": "aula10-instalando-deps-scripts",
+  "version": "1.0.0",
+  "main": "funcionarios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "description": ""
+}
