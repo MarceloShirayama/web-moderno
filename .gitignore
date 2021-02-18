@@ -1,7 +1,6 @@
 node_modules
 .DS_Store
 exercicios-web-cod3r/
-.eslintrc.json
 .vscode/
 JavaScript_Fundamentos_Recursos.pdf
 .comentario_referencial.*
