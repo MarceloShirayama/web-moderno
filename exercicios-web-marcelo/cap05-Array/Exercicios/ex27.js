@@ -6,24 +6,34 @@ Exemplo:
 inverter({ a: 1, b: 2, c: 3}) // retornará { 1: "a", 2: "b", 3: "c"}
 */
 
-const obj1 = [{
-  0: 'Owner Name',
-  1: 'Mailing Address',
-  2: 'Situs Address',
-  3: 'APN',
-}];
+console.log('Resolução 1:');
 
-function invertkeysOfObject(obj) {
-  const newArray = Object.keys(obj[0]).map((a) => ({ [a]: obj[0][a] }));
-  const sorted = newArray.sort((a, b) => Object.keys(b) - Object.keys(a));
-  const res = sorted.map((a) => Object.values(a)[0]);
+const object = { a: 1, b: 2, c: 3 };
 
-  return res;
+function invertKeyAndValue1(obj) {
+  const invertObj = {};
+
+  Object.entries(obj).forEach((keyValue) => {
+    const key = 0;
+    const value = 1;
+
+    invertObj[keyValue[value]] = keyValue[key];
+  });
+  return invertObj;
 }
 
-console.log(invertkeysOfObject(obj1));
+console.log(invertKeyAndValue1(object));
 
-/* referência:
-https://stackoverflow.com/questions/44965155/change-position-of-javascript-object-key-and-data
-*/
-// REVIEW: Rever o odesenvolvimento dessa função.
+console.log('===========================');
+
+console.log('Resolução 2:');
+
+function invertKeyAndValue2(obj) {
+  const invertObject = Object.entries(obj)
+    .map((keyValue) => keyValue.reverse());
+
+  return Object.fromEntries(invertObject);
+  // Object.fromEntries() transforma uma lista de pares chave-valor em um objeto.
+}
+
+console.log(invertKeyAndValue2(object));
