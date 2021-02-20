@@ -27,9 +27,8 @@ console.log('=================');
 console.log('Resolução 2:');
 
 function secondLargest2(arrayOfNumbers) {
-  const sortDecrescent = (a, b) => b - a;
-  const sorted = (array) => array.sort(sortDecrescent);
-  return sorted(arrayOfNumbers)[1];
+  const sortDecrescent = (array) => array.sort((a, b) => b - a);
+  return sortDecrescent(arrayOfNumbers)[1];
 }
 
 console.log(secondLargest2(numbers1));
