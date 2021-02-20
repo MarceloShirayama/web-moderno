@@ -34,3 +34,18 @@ function secondLargest2(arrayOfNumbers) {
 
 console.log(secondLargest2(numbers1));
 console.log(secondLargest2(numbers2));
+
+console.log('=================');
+
+console.log('Resolução 3:');
+
+function secondLargest3(arrayOfNumbers) {
+  let numbers = arrayOfNumbers;
+  const firstLargest = Math.max(...numbers);
+  numbers = numbers.filter((number) => number !== firstLargest);
+  const secondLargest = Math.max(...numbers);
+  return secondLargest;
+}
+
+console.log(secondLargest3(numbers1));
+console.log(secondLargest3(numbers2));
