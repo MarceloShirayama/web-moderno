@@ -41,10 +41,10 @@
 
   <ul class="tree">
     <li>
-      backend
+      <span wm-folder>backend</span>
       <ul>
         <li>
-          app
+          <span wm-folder>app</span>
           <ul>
             <li>produto.js</li>
             <li>usuario.js</li>
@@ -52,7 +52,7 @@
           </ul>
         </li>
         <li>
-          config
+          <span wm-folder>config</span>
           <ul>
             <li>banco.js</li>
             <li>rotas.js</li>
@@ -61,16 +61,29 @@
         </li>
       </ul>
     </li>
-    frontend
-    <ul>
-      <li>
-        public
-        <ul>
-          <li>app.css</li>
-          <li>app.js</li>
-          <li>index.html</li>
-        </ul>
-      </li>
-    </ul>
+    <li>
+      <span wm-folder>frontend</span>
+      <ul>
+        <li>
+          <span wm-folder>public</span>
+          <ul>
+            <li>app.css</li>
+            <li>app.js</li>
+            <li>index.html</li>
+          </ul>
+        </li>
+      </ul>
   </ul>
+  </li>
 </div>
+
+<script>
+  document.querySelectorAll('[wm-folder')
+    .forEach((folder) => {
+      folder.onclick = function (e) {
+        const ul = folder.nextElementSibling;
+        const currentDiplay = ul.style.display;
+        ul.style.display = currentDiplay === 'none' ? 'block' : 'none';
+      }
+    });
+</script>
