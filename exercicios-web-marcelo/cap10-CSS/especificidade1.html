@@ -2,15 +2,44 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Especificidade CSS</title>
-    <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
-    </style>
+  <meta charset="UTF-8">
+  <title>Especificidade CSS</title>
+  <style>
+    /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+    /*
+      Em linhas gerais: . . .
+
+      1. regra com !important
+      2. seletores mais específicaos
+      3. última regra processada (empate)
+      */
+
+    p {
+      background: linear-gradient(to right, yellow, red) !important;
+    }
+
+    /*por causa da regra !important tem prefrência aos*/
+
+    .observacao {
+      /*mais específico tem preferência a tag p abaixo*/
+      background-color: #5F5;
+    }
+
+    p {
+      background-color: #aaaa;
+      /*mesmo este estando abaixo o decima tem prefrência por ser mais específico*/
+    }
+
+    p.observacao {
+      /*mais específico que os 2 acima*/
+      background: yellow;
+    }
+  </style>
 </head>
 
 <body>
-    <p class='observacao'>Olha essa observação!!!!</p>
+  <p class='observacao'>Olha essa observação!!!!</p>
 </body>
 
 </html>
