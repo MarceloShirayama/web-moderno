@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        html { /* incluído para ser considerada a altura do body e da div */
+            height: 100%;
+        }
+
         body {
             font-size: 40px;
             background-color: coral;
+            height: 100%; /* para ser considerado tem que aumentar o pai */
+            margin: 0;
         }
 
         div {
@@ -16,6 +22,14 @@
 
         span {
             background-color: dodgerblue;
+        }
+
+        span, div {
+            width: 50%;
+            text-align: center;
+            /* height: 250px; */
+            height: 50%; /* para ser considerado tem que aumentar o pai */
+            display: block;
         }
     </style>
 </head>
