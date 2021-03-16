@@ -2,18 +2,38 @@
 <html>
 
 <head>
-    <meta charset='UTF-8'>
-    <title>Acessando Classes</title>
-    <link rel='stylesheet' href='css/estilo.css'>
+  <meta charset='UTF-8'>
+  <title>Acessando Classes</title>
+  <link rel='stylesheet' href='css/estilo.css'>
 </head>
 
 <body class='conteudo exercicio'>
-    <div>
-        Classes
-    </div>
-    <script>
-        // ...
-    </script>
+  <div>
+    Classes
+  </div>
+  <script>
+    const div = document.querySelector('div');
+    const classes = div.classList;
+    classes.add('destaque');
+    classes.remove('destaque');
+    classes.toggle('destaque');
+    console.log(`classes contém destaque: ${classes.contains('destaque')}`);
+    console.log(`Quantidade de elementos de classes: ${classes.length}`);
+    classes.toggle('destaque');
+    console.log(`Quantidade de elementos de classes: ${classes.length}`);
+    classes.add('destaque1');
+    classes.add('destaque2');
+    console.log(`Quantidade de elementos de classes: ${classes.length}`);
+
+    for (let c of classes) {
+      console.log(c);
+    }
+
+    classes.forEach((c) => console.log(c));
+
+    console.log(Array.from(classes));
+    console.log([...classes]);
+  </script>
 </body>
 
 </html>
