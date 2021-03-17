@@ -93,9 +93,9 @@ class Passaro {
     // eslint-disable-next-line no-return-assign
     this.setY = (y) => this.elemento.style.bottom = `${y}px`;
 
-    // eslint-disable-next-line no-return-assign
+    // eslint-disable-next-line no-return-assign,  no-unused-vars
     window.onkeydown = (e) => voando = true;
-    // eslint-disable-next-line no-return-assign
+    // eslint-disable-next-line no-return-assign,  no-unused-vars
     window.onkeyup = (e) => voando = false;
 
     this.animar = () => {
@@ -148,6 +148,33 @@ class Progresso {
 //   passaro.animar();
 // }, 20);
 
+function estaoSobrepostos(elementoA, elementoB) {
+  const a = elementoA.getBoundingClientRect();
+  const b = elementoB.getBoundingClientRect();
+
+  const horizontal = a.left + a.width >= b.left
+    && b.left + b.width >= a.left;
+  const vertical = a.top + a.height >= b.top
+    && b.top + b.height >= a.top;
+
+  return horizontal && vertical;
+}
+
+function colidiu(passaro, barreiras) {
+  // eslint-disable-next-line no-shadow
+  let colidiu = false;
+  // eslint-disable-next-line no-shadow
+  barreiras.pares.forEach((ParDeBarreiras) => {
+    if (!colidiu) {
+      const superior = ParDeBarreiras.superior.elemento;
+      const inferior = ParDeBarreiras.inferior.elemento;
+      colidiu = estaoSobrepostos(passaro.elemento, superior)
+        || estaoSobrepostos(passaro.elemento, inferior);
+    }
+  });
+  return colidiu;
+}
+
 class FlappyBird {
   constructor() {
     let pontos = 0;
@@ -157,7 +184,7 @@ class FlappyBird {
     const largura = areaDoJogo.clientWidth;
 
     const progresso = new Progresso();
-    const barreiras = new Barreiras(altura, largura, 200, 400,
+    const barreiras = new Barreiras(altura, largura, 220, 400,
       () => progresso.atualizarPontos(++pontos));
     const passaro = new Passaro(altura);
 
@@ -167,14 +194,13 @@ class FlappyBird {
 
     this.start = () => {
       // loop do jogo
-      // const temporizador = setInterval(() => {
-      //   barreiras.animar();
-      //   passaro.animar();
-      //  }, 20);
-      // };
-      setInterval(() => {
+      const temporizador = setInterval(() => {
         barreiras.animar();
         passaro.animar();
+
+        if (colidiu(passaro, barreiras)) {
+          clearInterval(temporizador);
+        }
       }, 20);
     };
   }
